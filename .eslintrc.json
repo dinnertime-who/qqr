@@ -22,6 +22,7 @@
         "disallowTypeAnnotations": false
       }
     ],
+    "@typescript-eslint/no-require-imports": "off",
     "react-hooks/rules-of-hooks": "off", // hook 네이밍 규칙 끄기
     "react-hooks/exhaustive-deps": "off" // hook dependency 알림 끄기
   }
