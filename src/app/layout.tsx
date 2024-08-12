@@ -1,10 +1,8 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.css';
 import { MAIN_METADATA } from '@/config/seo';
 import { ThemeProvider } from '@/components/theme-provider';
-
-const inter = Inter({ subsets: ['latin'] });
+import { Pretendard } from '@/config/fonts';
 
 export const metadata = MAIN_METADATA satisfies Metadata;
 
@@ -15,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${Pretendard.variable} font-pretendard`}>
         <ThemeProvider
           attribute="data-theme"
           defaultTheme="system"
