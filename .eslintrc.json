@@ -1,6 +1,11 @@
 {
   "parser": "@typescript-eslint/parser",
-  "extends": ["plugin:@typescript-eslint/recommended", "next/core-web-vitals"],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals",
+    "plugin:eslint-plugin-next-on-pages/recommended"
+  ],
+  "plugins": ["eslint-plugin-next-on-pages"],
   "rules": {
     // 미사용 변수 규칙
     "no-unused-vars": "off", // 기본 no-unused-vars 규칙을 끔
