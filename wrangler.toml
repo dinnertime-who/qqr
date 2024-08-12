@@ -2,3 +2,4 @@ name = "qqr"
 compatibility_date = "2024-08-12"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".vercel/output/static"
+send_metrics = false
