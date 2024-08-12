@@ -1,0 +1,21 @@
+{
+  "theme_color": "#8936FF",
+  "background_color": "#8ab4d6",
+  "icons": [
+    { "purpose": "maskable", "sizes": "512x512", "src": "icon512_maskable.png", "type": "image/png" },
+    { "purpose": "any", "sizes": "512x512", "src": "icon512_rounded.png", "type": "image/png" }
+  ],
+  "screenshots": [
+    { "src": "screenshot1.png", "type": "image/png", "sizes": "1200x630", "form_factor": "wide" },
+    { "src": "screenshot2.png", "type": "image/png", "sizes": "512x512", "form_factor": "narrow" }
+  ],
+  "orientation": "portrait",
+  "display": "standalone",
+  "dir": "auto",
+  "lang": "ko-KR",
+  "name": "QQR",
+  "id": "/",
+  "short_name": "QQR",
+  "start_url": "/",
+  "scope": "/"
+}
