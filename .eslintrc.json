@@ -1,3 +1,28 @@
 {
-  "extends": "next/core-web-vitals"
+  "parser": "@typescript-eslint/parser",
+  "extends": ["plugin:@typescript-eslint/recommended", "next/core-web-vitals"],
+  "rules": {
+    // 미사용 변수 규칙
+    "no-unused-vars": "off", // 기본 no-unused-vars 규칙을 끔
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "_",
+        "varsIgnorePattern": "_",
+        "ignoreRestSiblings": true, // 구조 분해 할당 시 나머지 변수를 무시
+        "vars": "all",
+        "args": "after-used"
+      }
+    ],
+    // type import시 type 명시 규칙
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "prefer": "type-imports",
+        "disallowTypeAnnotations": false
+      }
+    ],
+    "react-hooks/rules-of-hooks": "off", // hook 네이밍 규칙 끄기
+    "react-hooks/exhaustive-deps": "off" // hook dependency 알림 끄기
+  }
 }
