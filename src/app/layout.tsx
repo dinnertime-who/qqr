@@ -16,7 +16,7 @@ export default function RootLayout({
       <body className={`${Pretendard.variable} font-pretendard`}>
         <ThemeProvider
           attribute="data-theme"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableColorScheme={true}
           enableSystem={true}
           disableTransitionOnChange={true}
