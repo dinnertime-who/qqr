@@ -1,3 +1,5 @@
+import { PlatformHeader } from './_components/platform-header';
+
 export default async function Layout({
   children,
 }: Readonly<{
@@ -5,6 +7,7 @@ export default async function Layout({
 }>) {
   return (
     <section>
+      <PlatformHeader />
       <main>{children}</main>
     </section>
   );
