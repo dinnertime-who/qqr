@@ -6,9 +6,14 @@ import Link from 'next/link';
 import { useFreeQrGenerateContextContext } from '../_contexts/free-qr-generate.context';
 import { verifyUrl } from '../_server/actions';
 
-type Props = React.HTMLAttributes<HTMLElement>;
+type Props = React.HTMLAttributes<HTMLElement> & {
+  i18n: {
+    LINK: string;
+    BUTTON: string;
+  };
+};
 
-export const ExperienceButtons = ({ className }: Readonly<Props>) => {
+export const ExperienceButtons = ({ className, i18n }: Readonly<Props>) => {
   const { getInputedUrl, focusInputRef } = useFreeQrGenerateContextContext();
 
   const onClickFreeStartButton = async () => {
@@ -29,14 +34,14 @@ export const ExperienceButtons = ({ className }: Readonly<Props>) => {
           'rounded-full bg-transparent hover:bg-transparent text-base @lg:text-xl h-auto py-3 @lg:py-4 px-6 @lg:px-8',
         )}
       >
-        로그인 하고 더 많은 기능 사용하기
+        {i18n.LINK}
       </Link>
       <Button
         type="button"
         className="rounded-full text-base @lg:text-xl h-auto py-3 @lg:py-4 px-6 @lg:px-8"
         onClick={() => onClickFreeStartButton()}
       >
-        무료로 시작하기
+        {i18n.BUTTON}
       </Button>
     </div>
   );

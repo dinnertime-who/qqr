@@ -1,10 +1,14 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { MAIN_METADATA } from '@/config/seo';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Pretendard } from '@/config/fonts';
+import { getLocaleFromHeaders } from '@/config/i18n/server';
+import { getI18nMetadata } from '@/config/seo';
 
-export const metadata = MAIN_METADATA satisfies Metadata;
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocaleFromHeaders();
+  return getI18nMetadata(locale);
+}
 
 export default function RootLayout({
   children,
