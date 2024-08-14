@@ -1,0 +1,25 @@
+import { Input } from '@/components/ui/input';
+import { cn } from '@/lib/utils';
+
+type Props = React.HTMLAttributes<HTMLElement>;
+
+export const QrGeneratorInput = ({ className }: Readonly<Props>) => {
+  return (
+    <div
+      className={cn(
+        'text-lg @lg:text-2xl',
+        'w-full flex items-center border-2 rounded-full overflow-hidden',
+        'transition-shadow duration-200',
+        'ring-offset-background [&:has(input:focus-visible)]:ring-4 [&:has(input:focus-visible)]:ring-ring [&:has(input:focus-visible)]:ring-offset-0',
+        className,
+      )}
+    >
+      <span className="pl-4 @lg:pl-8">https://</span>
+      <Input
+        className="border-none bg-transparent py-3 @lg:py-4 h-auto px-0 pl-1 pr-4 @lg:pr-8"
+        placeholder="www.smart-qqr.com"
+        variant={'no-ring'}
+      />
+    </div>
+  );
+};
