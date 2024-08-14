@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import { serverEnv } from './env';
 
-export const APPLICATION_NAME = 'QQR';
+export const APPLICATION_NAME = 'SQR';
 
 export const SEO_TITLE = `스마트한 QR코드 생성기 - ${APPLICATION_NAME}`;
 
 export const SEO_DESCRIPTION = `온라인과 오프라인을 연결하는 스마트한 웹 링크 관리의 시작,
-  QQR에서 URL 단축과 QR코드 생성, 애널리틱스까지. 지금 무료로 체험해보세요!!`;
+  SQR에서 URL 단축과 QR코드 생성, 애널리틱스까지. 지금 무료로 체험해보세요!!`;
 
 export const SEO_KEYWORDS = [
   APPLICATION_NAME,
