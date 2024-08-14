@@ -1,9 +1,14 @@
+'use client';
+
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
+import { useFreeQrGenerateContextContext } from '../_contexts/free-qr-generate.context';
 
 type Props = React.HTMLAttributes<HTMLElement>;
 
 export const QrGeneratorInput = ({ className }: Readonly<Props>) => {
+  const { inputRef } = useFreeQrGenerateContextContext();
+
   return (
     <div
       className={cn(
@@ -16,6 +21,7 @@ export const QrGeneratorInput = ({ className }: Readonly<Props>) => {
     >
       <span className="pl-4 @lg:pl-8">https://</span>
       <Input
+        ref={inputRef}
         className="border-none bg-transparent py-3 @lg:py-4 h-auto px-0 pl-1 pr-4 @lg:pr-8"
         placeholder="www.smart-qqr.com"
         variant={'no-ring'}
