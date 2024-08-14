@@ -10,13 +10,15 @@ export async function generateMetadata(): Promise<Metadata> {
   return getI18nMetadata(locale);
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocaleFromHeaders();
+
   return (
-    <html lang="ko" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${Pretendard.variable} font-pretendard`}>
         <ThemeProvider
           attribute="data-theme"
