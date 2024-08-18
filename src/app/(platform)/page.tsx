@@ -21,7 +21,7 @@ export default async function Home() {
   const locale = await getLocaleFromHeaders();
 
   return (
-    <section className="@container w-screen px-4 lg:px-8 h-svh flex flex-col justify-center items-center bg-gradient-to-tr from-10% from-background to-primary">
+    <section className="@container text-transparent bg-gradient bg-clip-text w-screen px-4 lg:px-8 h-svh flex flex-col justify-center items-center">
       <h1 className="text-center break-keep text-4xl @lg:text-5xl @3xl:text-6xl font-semibold mb-4">
         {I18N_SEO_TITLE[locale]}
       </h1>

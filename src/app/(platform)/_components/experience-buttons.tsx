@@ -31,14 +31,14 @@ export const ExperienceButtons = ({ className, i18n }: Readonly<Props>) => {
         type="button"
         className={cn(
           buttonVariants({ variant: 'outline' }),
-          'rounded-full bg-transparent hover:bg-transparent text-base @lg:text-xl h-auto py-3 @lg:py-4 px-6 @lg:px-8',
+          'rounded-full text-foreground text-base @xl:text-xl h-auto py-3 @xl:py-4 px-6 @xl:px-8',
         )}
       >
         {i18n.LINK}
       </Link>
       <Button
         type="button"
-        className="rounded-full text-base @lg:text-xl h-auto py-3 @lg:py-4 px-6 @lg:px-8"
+        className="rounded-full text-base @xl:text-xl h-auto py-3 @xl:py-4 px-6 @xl:px-8"
         onClick={() => onClickFreeStartButton()}
       >
         {i18n.BUTTON}

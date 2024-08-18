@@ -1,7 +1,6 @@
 import type { Config } from 'tailwindcss';
 
 const config = {
-  darkMode: ['selector', '[data-theme="dark"]'],
   content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
   prefix: '',
   theme: {
@@ -15,6 +14,9 @@ const config = {
     extend: {
       fontFamily: {
         pretendard: ['var(--font-pretendard)'],
+      },
+      backgroundImage: {
+        gradient: 'var(--gradient)',
       },
       colors: {
         border: 'hsl(var(--border))',
